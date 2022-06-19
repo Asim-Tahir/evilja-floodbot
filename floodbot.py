@@ -48,7 +48,7 @@ def addFlood(fname,flood):
     if len(flood) > 8000:
         return "< *Floodunuzun uzunluğu 8000 karakterden fazla. Allah mısın amına koyim o flood ne* >"
     if "*" in fname or "/" in fname or "\\" in fname: 
-        return "< *Flood adı yıldız ile başlayamaz veya / içeremez* >"
+        return "< *Flood adı *, \\, / içeremez* >"
     if len(fname) > 50: return "< *Flood adı 50 karakterden fazla olamaz* >"
     with open("tmpfloodlar\\{}.flood".format(fname),"a+",encoding='utf-8') as f:
         f.write(flood)
